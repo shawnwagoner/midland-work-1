@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(87, 211, 87);
+}
+
+.center{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.poolpic{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 70px;
+}
+
+.poolpic:hover{
+    border-radius: 0%;
+}
+    
+
+.left-list{
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.right-list{
+    text-align: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a:link{
+    color: blue;
+}
+
+a:hover{
+    color: orange ;
+} 
+
+a:visited{
+    color: red;
+}
+
+footer{
+    text-align: center;
+    bottom: auto;
+    font-family: lobster;
+}
