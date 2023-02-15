@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<hlink>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,23 @@
     <title>Document</title>
     <style>
         
+        .leagues {
+            flex-wrap: wrap;
+            flex-direction: row;
+            
+        }
 
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            
+        }
         .main-container{
             display: flex;
+            flex-wrap: wrap;
+            
+           
         }
         
         .image-container{
@@ -19,38 +33,91 @@
             flex-direction: column;
             background-color: aqua;
             align-items: center;
-            flex-basis: 70%;
-            
+            height: 100%;
         }
         
         .list-container{
             display: flex;
             flex:0 0 50%;
-            background-color: red ;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: red;
         }
         
-        .img{
+        .BCA{
             display: flex;
             align-items: center;
             height: 100px;
             width: 100px;
         }
+        .BCA:hover{
+            transform:scale(2,2);
+        }
+        .APA{
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+        }
+        .APA:hover{
+            transform:rotate(90deg);
+        }
+        .VNEA{
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+        }
+        .VNEA:hover{
+            transition:all .5s linear 300ms ;
+            transform:skew(10deg,10deg);
+            
+        }
+        .USAPL{
+            display: flex;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            
+        }
+        
 
         .Billards{
             text-align: center;
             background-color: greenyellow;
+        }
+
+        .billiardsPictures {
+            flex: 1 0 30%;
+            padding: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
         }
         
         .footer{
             text-align: center;
             text-decoration: solid;
             background-color: greenyellow;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            position:fixed;
+            background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/9-ball-rack-david-g-paul.jpg) ;
+            background-repeat:repeat;
+            background-size: contain;
         }
         
         p{
           margin: 30px;
           align-items: center;
         }
+        li{
+            margin: 30px;
+        }
+        
+        
         
     </style>
 </head>
@@ -67,33 +134,34 @@
     </nav>
       <div class="main-container">
         <div class="list-container">
-          <ul>
-           <h1>Differnet Leagues to join</h1>
-           <li>BCA</li>
-           <li>APA</li>
-           <li>VNEA</li>
-           <li>USAPL</li>
+            
+          <ul class="leagues">
+            <h1>Differnet Leagues to join</h1>
+            <li>BCA</li>
+            <li>APA</li>
+            <li>VNEA</li>
+            <li>USAPL</li>
           </ul>
        </div>
        <div class="image-container">
-         <div>
-            <img class="img" src="https://www.kromebilliards.com/wp-content/uploads/sites/27/2016/09/BCA-LOGO.jpg">
+         <div class="billiardsPictures">
+            <img class="BCA" src="https://www.kromebilliards.com/wp-content/uploads/sites/27/2016/09/BCA-LOGO.jpg">
             <p>The BCA Pool League is an umbrella membership organization that allows pool leagues around the world to "Be Part of Something Bigger." A single local league, even one with hundreds of members, is limited in what it can offer its members. However, when hundreds or thousands of leagues around the world band together under the BCA Pool League umbrella, the economy of scale provides all leagues value and benefits that they could not achieve alone.
             </p>
          </div>
-         <div>
-            <img class="img" src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/0a/fd/d9/0afdd973-6966-3c7e-38fe-f3cd1a8d5cbc/source/512x512bb.jpg">
+         <div class="billiardsPictures">
+            <img class="APA" src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/0a/fd/d9/0afdd973-6966-3c7e-38fe-f3cd1a8d5cbc/source/512x512bb.jpg">
             <p>American Poolplayers Association (APA) was founded by professional poolplayers and Billiard Hall of Famers Terry Bell and Larry Hubbart in 1979 as the National Pool League, which became the American Poolplayers Association in 1981. The two realized the popularity of the sport, but knew, that different from other sports, there was no existing recreational league system.></p> 
          </div>
             
-         <div>
-            <img class="img" src="https://www.masse.co.nz/wp-content/uploads/2020/05/VNEA-Pool-Leagues.png">
+         <div class="billiardsPictures">
+            <img class="VNEA" src="https://www.masse.co.nz/wp-content/uploads/2020/05/VNEA-Pool-Leagues.png">
             <p>Valley National 8-Ball League Association (VNEA) is a non-profit organization established to promote the game of pool on
                 coin-operated equipment. The membership is comprised of men, women and junior players, coin machine operators and
                 manufacturers.</p>
          </div>
-         <div>
-            <img class="img" src="https://static.wixstatic.com/media/eba54c_c22b4434e9404a638bd7203da9c4cc5d.png/v1/fill/w_480,h_211,al_c/eba54c_c22b4434e9404a638bd7203da9c4cc5d.png">
+         <div class="billiardsPictures">
+            <img class="USAPL" src="https://static.wixstatic.com/media/eba54c_c22b4434e9404a638bd7203da9c4cc5d.png/v1/fill/w_480,h_211,al_c/eba54c_c22b4434e9404a638bd7203da9c4cc5d.png">
             <p>The USA Pool League is an amateur league designed to provide the most fair and fun pool experience in the world. The format, scoring system, player ratings, events, prizes and benefits eliminate many of the problems found in other league systems. The USA Pool League is powered by FargoRate, providing you with the most accurate and universally accepted player ratings.></p>
          </div>
         </div>
