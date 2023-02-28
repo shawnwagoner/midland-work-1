@@ -46,10 +46,9 @@
   .container-3{
     display: flex;
     flex-direction: column;
-    max-width: 20%;
     background-color: red;
     margin: 10px 10px 10px 10px;
-    height: 800px;
+    height: 90%;
   }
   
   .container-3> div {
@@ -94,9 +93,12 @@
   
   textarea{
     height: 800px;
-    width: 95%;
+    max-width: 75%;
+
   }
-  
+   
+
+
   footer{
     background-color: rgb(51, 50, 50);
     text-align: center;
@@ -107,7 +109,6 @@
   }
   .container-4> div> img{
     width: 75%;
-    height: 10%;
   }
 
   .container-4> div>img:hover{
