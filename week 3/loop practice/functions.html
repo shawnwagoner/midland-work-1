@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+<body>
+    <script src="./functions.js"></script>
+
+<script>
+     
+    
+//    function absVal(integer){ 
+//        if(integer > 0)
+//        return integer;
+//        else (integer = integer * -1);
+//        return integer;
+//    console.log (integer)}
+
+//let output= absVal (-5)
+//console.log (output)
+//output=absVal (10)
+//console.log (output)
+
+
+
+
+//    function pow (x,y){
+//      let value= x;
+//      for (let a=1; a < y; a++);{
+//      value = value * x}
+//      console.log(value)}
+
+//    pow (6,4);
+
+
+
+//function Palindrome(word) {
+//        let lowerCasedWord = word.toLowerCase();
+//        let newWord = lowerCasedWord.split("").reverse().join("");
+//
+//        if (newWord === lowerCasedWord) {
+//          console.log("It is a palindrome")
+//        }
+//        else {
+//        console.log("It is not a palindrome")
+//    }}
+
+//    Palindrome("racecar")
+//    Palindrome("Racecar")
+//    Palindrome("Raptor")
+
+
+
+// let words= ["cueball","billards","eightball","pocket","break"]
+// let xwords= ["billards","pocket","scratched", "foul"]
+//  function banned(w,x){
+//  for (let i = 0; i < w.length; i++){
+//  for (let j = 0; j < x.length; j++){
+//    if (w[i]===x[j]){
+//        w[i]= "redacted";
+//    }
+//  }
+//  }
+//  return w;
+//}
+//console.log(banned(words, xwords));
+
+//banned("cueball", "billards", "pocket", "eightball", "pocket", "break", "scratched","foul")
+
+
+// function names(a,b){//
+//    if (b<a) {
+//        for (let i=a; i >= b; i--){
+//            logger(i);}
+//        }
+//        else if (b>a){
+//            for (let i =a; i <=b; i++){
+//                logger(i);}
+//            }
+            
+        
+
+// function logger(num) {
+//    if(num % 3 === 0 && num % 2 === 0) {//
+//        console.log("FizzBuzz");}
+//        else if (num % 2 === 0){//
+//           console.log("Fizz");}
+//             else if(num % 3 === 0){//
+//                console.log("Buzz");
+//            }
+//            else{
+//                console.log(num);
+//            }
+//            }
+
+//        names(19, 33);
+//        names(44, 67);
+
+
+  
+ //  function day(day, month, year){
+ //   const dsow= ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+ //   const date = new Date (`${month}/${day}/${year}`);
+ //   const dow= dsow[date.getDay()];
+ //   return dow;
+//}
+
+ //console.log(day(7,3,2023));
+
+
+//   function Pizza(People, Slices){
+//    let lo = Slices % People;
+//    if (lo !== 0) {
+//        console.log(`Ther is not enough pizza, ${People - lo} people are being left out!!`);
+
+//    } else { console.log("We are all eating tongiht!")}
+//   }
+    
+//   Pizza(5,10)
+//   Pizza(10, 12)
+ 
+  function triangle( side1, side2, side3) {
+    let sides = [side1, side2, side3].sort((a,b) => a -b);
+    let longside = sides[2];
+    let sum= Math.pow(sides[0], 2) + Math.pow(sides[1], 2);
+    let square= Math.pow(longside, 2);
+    return square === sum;
+  }
+
+  console.log(triangle (5, 2, 6));
+  console.log(triangle(2,3,3));
+
+
+ 
+
+
+
+        
+    
+
+
+
+</script>
+
+
+
+ 
+
+  </body>

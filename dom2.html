@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    
+    <script>
+      //! Once the page loads, create 4 divs of different styling and add them to the DOM. 
+      //! The styling should be built in the raw javascript and should have the following styles:
+      //!   - Div 1 - Red background with black border, 200px by 200px
+      //!   - Div 2 - Blue background, circular shape, 100px by 100px
+      //!   - Div 3 - Orange Border, white with red text that says: "Div 3" 150px by 100px
+      //!   - Div 4 - Fixed to the top, any color, and taking up the full width of the page.
+
+      // One way to accomplish executing something once the page loads is by adding an event listener
+      
+      
+      function dom2() {
+        
+       let div1 = document.createElement("div");
+        document.body.appendChild(div1);
+        div1.style.border= "3px solid black";
+        div1.style.height = "100px";
+        div1.style.width = "100px";
+        div1.style.backgroundColor = "red";
+        div1.style.marginTop= "120px";
+        
+
+      let div2 = document.createElement("div");
+       document.body.appendChild(div2);
+      div2.style.height = "100px";
+      div2.style.width = "100px";
+      div2.style.borderRadius = "75px";
+      div2.style.backgroundColor= "blue";
+
+      let div3 = document.createElement("div");
+      document.body.appendChild(div3);
+      div3.style.border= "1px solid orange";
+      div3.style.color="red";
+      div3.innerHTML= "div 3";
+      div3.style.height= "150px";
+      div3.style.width="100px";
+
+      let div4 = document.createElement("div");
+      document.body.appendChild(div4);
+      div4.style.width= "100vw";
+      div4.style.height= "100px";
+      div4.style.backgroundColor= "green";
+      div4.style.position="absolute";
+      div4.style.top="0px";
+      div4.style.backgroundColor= "green";
+       
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        dom2();
+    });
+
+
+    
+    </script>
+    
+  </body>
+</html>

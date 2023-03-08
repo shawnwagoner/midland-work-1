@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 300px;
+        width: 100%;
+        color: white;
+      }
+      .green {
+        background-color: green;
+      }
+      .red {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="green" id="clock"></div>
+    <script>
+
+        let timer= prompt("Set a time limit");
+        document.getElementById("clock").innerText = timer;
+
+        let count = setInterval (() => {
+            document.getElementById("clock").innerText = timer;
+            timer--;
+        }, 1000);
+
+        setTimeout(() => {
+            let green = document.getElementsByClassName("green");
+            for (let i = 0; i < green.length; i++){
+            green[i].classList.replace("green", "red")}
+
+            clearInterval(count);
+        }, (timer * 1000));
+
+      //! Create a simple site that prompts the user for a time limit.
+      //! Start the clock/div with a green background added by a class.
+      //! Display the starting time on the DOM.
+      //! Count the time down every second and update the dom.
+      //! When the timer reaches zero:
+      //!   - Remove the class with the green background and add one with a red background.
+      //!   - The timer should also stop counting down.
+    </script>
+  </body>
+</html>
