@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fetch Requests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+    header{
+        text-align: center;
+        color: white;
+        background-image: radial-gradient(yellow, black, red);
+        height: 50px;
+        width: 100vw;
+        margin-bottom: 50px;
+    }
+    
+   #button{
+    margin-top: 95px ;
+   }
+    
+  
+
+  .container{
+    display: flex;
+    color: white ;
+    background-image: linear-gradient(to top right, black,red, yellow, black,yellow, red, black)  ;
+    border: 3px solid black;
+    min-height: 300px;
+    padding-top: 5px;
+  }
+
+.bottomInfo{
+  display:none;
+}
+</style> 
+
+
+
+</head>
+
+  <body>
+   <header>OMDB SEARCH</header>
+    
+    <div class="container">
+      <br>
+        <div id="form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" />
+            <label for="year">Year:</label>
+            <input type="text" id="year" />
+            <label for="type">Type: </label>
+            <select name="type" id="type">
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+            <button id="search" class="btn">Search</button>
+            <div id="info"></div>
+            <button id="bonus">BONUS CONTENT</button>
+            <div id="bottomInfo"></div>
+        </div>
+      
+      
+      <script>
+        
+
+          const bButton = document.getElementById("bonus")
+          const bInfo = document.getElementById("bottominfo");
+          const title= document.getElementById("title");
+          const year= document.getElementById("year");
+          const type= document.getElementById("type");        
+          const search = document.getElementById("search");
+          const form = document.getElementById("form");
+          const results = document.getElementById("info");
+          
+          
+          function buildURL() {
+         let base = `http://www.omdbapi.com/?apikey=3943dda0&t=${title.value}&type=${type.value}`;
+         if(year.value !== "") {
+          base += `&y=${year.value}`;
+          }
+        console.log(base);
+         return base;
+         }
+         
+         
+
+         function Results(res) {
+
+const title = document.createElement("h2");
+title.textContent = res.Title;
+const year = document.createElement("h3");
+year.textContent = "Year: " + res.Year;
+const type = document.createElement("h4");
+type.textContent = "Type: " + res.Type;
+const rated = document.createElement("h4");
+rated.textContent = "Rated: " + res.Rated;
+const runtime = document.createElement("h4");
+runtime.textContent = "Runtime: " + res.Runtime;
+const genre = document.createElement("h4");
+genre.textContent = "Genre: " + res.Genre;
+const actors = document.createElement("h4");
+actors.textContent = "Starring: " + res.Actors;
+const plot = document.createElement("h3");
+plot.textContent =  res.Plot;
+const director=document.createElement("h4");
+director.textContent= "Director: " + res.Director;
+
+
+results.appendChild(title);
+results.appendChild(rated);
+results.appendChild(year);
+results.appendChild(director);
+results.appendChild(genre);
+results.appendChild(type);
+results.appendChild(runtime);
+results.appendChild(actors);
+results.appendChild(plot);
+
+         
+
+
+function bIfno(res){
+
+  const awards = document.createElement("h2");
+awards.textContent ="Awards: " + res.Awards;
+const boxOffice = document.createElement("h2");
+boxOffice.textContent ="Box Office: " + res.BoxOffice;
+const country = document.createElement("h2");
+country.textContent ="Country: " + res.Country;
+const dvd = document.createElement("h2");
+dvd.textContent ="DVD: " + res.DVD;
+const language = document.createElement("h2");
+language.textContent ="Language: " + res.Language;
+const metascore = document.createElement("h2");
+metascore.textContent ="Metascore: " + res.Metascore;
+const writer = document.createElement("h2");
+writer.textContent ="Writer: " + res.Writer;
+const imdbId = document.createElement("h2");
+imdbId.textContent ="Imdb Id: " + res.ImdbId;
+const imdbRating = document.createElement("h2");
+imdbRating.textContent ="Imdb Rating: " +  res.ImdbRating;
+const imdbVotes = document.createElement("h2");
+imdbVotes.textContent = "Imdb Votes: " + res.ImdbVotes;
+
+results.appendChild(awards);
+results.appendChild(boxOffice);
+results.appendChild(country);
+results.appendChild(dvd);
+results.appendChild(language);
+results.appendChild(metascore);
+results.appendChild(writer);
+results.appendChild(imdbId);
+results.appendChild(imdbRating);
+results.appendChild(imdbVotes);
+  
+} }   
+         
+search.addEventListener("click", (e) => {
+  e.preventDefault();
+  if(title.value.length < 3) {
+    alert("You must enter 3 or more letters of title");
+  }
+  fetch(buildURL())
+  .then ((response) => {
+    console.log(title.value + "" + type.value);
+    if (!response.ok) {
+      alert("Error");}
+      else {
+        
+        console.log(response.status);
+        return response.json()
+        .then((res) => { 
+        console.log(res);
+        (Results(res))});
+      }
+    });
+  }
+);
+
+               
+
+
+
+
+
+        </script>
+      
+    </body>
+
+</div>
+    
+    
+    
+    
+    
+    

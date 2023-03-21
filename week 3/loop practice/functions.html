@@ -138,15 +138,22 @@
 
 
   function damage ( monster, health) {
-    let totalDmg=0;
-      for (let i = 0; i<=m.lenght-1; i++){
-        totalDmg= totalDmg + monster[i];
-     
+    let finalBlow=0;
+      for (let i = 0; i < monster.length; i++){
+        finalBlow = finalBlow + monster[i];}
+        if (finalBlow >= health) {
+          console.log("Your hero has sucumbed to the dungeon");
+        } else{
+          console.log("Your hero continues to fight on");
+        }
+      }
 
-      
+      damage([1,2,3,4,], 8);
+      damage([9,18,36,62], 130);
+
  
 
-  }
+  
     
 
 
