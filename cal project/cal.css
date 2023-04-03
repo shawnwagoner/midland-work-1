@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
+.grid{
+    display:grid;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+   
+}
+
+
+*,*::before, *::after{
+    box-sizing: border-box;
+    font-family: "obitron";
+
+}
+
+body{
+    background:linear-gradient(red, black);
+    padding: 0;
+    margin: 0;
+}
+
+.grid> button{
+    cursor:pointer;
+    font-size: 3rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: aqua;
+
+}
+
+.grid> button:hover{
+    background-color: azure;
+
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.screen{
+    grid-column: 1 / -1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.screen .first{
+    color: red;
+    font-size: 1.5rem;
+}
+
+.screen .second{
+    color: white;
+    font-size: 2.5rem;
+}
